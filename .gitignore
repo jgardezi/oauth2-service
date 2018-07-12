@@ -14,5 +14,8 @@ application/Homestead.yaml
 application/npm-debug.log
 application/yarn-error.log
 application/.env
+application/public/css
+application/public/js
+application/public/mix-manifest.json
 
 # Ignore docker
