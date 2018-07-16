@@ -7,6 +7,10 @@ networks:
     driver: ${NETWORKS_DRIVER}
 
 volumes:
+  # application:
+  #   driver: ${VOLUMES_DRIVER}
+  #   driver_opts:
+  #     size: 5
   mysql:
     driver: ${VOLUMES_DRIVER}
   memcached:
