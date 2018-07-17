@@ -7,10 +7,10 @@ networks:
     driver: ${NETWORKS_DRIVER}
 
 volumes:
-  # application:
-  #   driver: ${VOLUMES_DRIVER}
-  #   driver_opts:
-  #     size: 5
+  application:
+    driver: ${VOLUMES_DRIVER}
+    driver_opts:
+      size: 5
   mysql:
     driver: ${VOLUMES_DRIVER}
   memcached:
@@ -76,7 +76,7 @@ services:
           - BLACKFIRE_CLIENT_ID=${BLACKFIRE_CLIENT_ID}
           - BLACKFIRE_CLIENT_TOKEN=${BLACKFIRE_CLIENT_TOKEN}
       volumes:
-        - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
+        - application:${APP_CODE_PATH_CONTAINER}
       extra_hosts:
         - "dockerhost:${DOCKER_HOST_IP}"
       ports:
